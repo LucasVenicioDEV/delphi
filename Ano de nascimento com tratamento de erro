@@ -1,0 +1,29 @@
+package Exercicios;
+
+
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class AnoDeNascimento {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        Calendar c= Calendar.getInstance();
+        int year=c.get(Calendar.YEAR);
+        System.out.printf("Idade -> ");
+        int idade= input.nextInt();
+        System.out.printf("Você já fez aniversario esse ano? [s/n]");
+        String pergunta=input.next();
+        if(pergunta.equals("s")){
+            System.out.println("Ano de nascimento -> "+(year-idade));
+        }else if (pergunta.equals("n")){
+            System.out.println("Ano de nascimento -> "+(year-idade-1));
+        }else{
+            System.out.printf("Resposta Invalida!");
+        }
+
+
+
+
+    }
+}
