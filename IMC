@@ -1,0 +1,37 @@
+package com.OperadoresLogicos;
+
+import java.util.Scanner;
+
+public class IMC {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.printf("Peso -> ");
+        double peso = input.nextDouble();
+
+        System.out.printf("altura -> ");
+        double altura = input.nextDouble();
+
+        double imc = peso/(altura*altura);
+        System.out.println(imc);
+
+        if (imc<=18.5){
+            System.out.printf("Massa corporal = Abaixo do peso. ");
+
+        }
+        else if (imc<18.5 && imc>=25){
+            System.out.printf("Massa corporal = Peso normal");
+        }
+        else if (imc<25 && imc>=30){
+            System.out.printf("Massa corporal = Acima do peso ");
+        }
+        else if (imc>30){
+            System.out.printf("Massa corporal = Obeso");
+        }else{
+        System.out.println("Erro!");
+        
+        }
+        System.out.println("Seu imc é "+ imc);
+
+
+    }
+}
