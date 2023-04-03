@@ -1,0 +1,40 @@
+package Array;
+
+import java.util.Scanner;
+
+public class ArrayProdutosPreços {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("how man products? ");
+        int x = input.nextInt();
+        String arrayName[]=new String[x];
+        double arrayValue[]= new double[x];
+        double average=0;
+        for (int i = 0; i < x; i++) {
+
+            System.out.println("Product Name "+(i+1)+" :");
+            arrayName[i]=input.next();
+            System.out.println("Product Price "+(i+1)+" :");
+            arrayValue[i]=input.nextDouble();
+            average = average + arrayValue[i];
+
+
+        }
+        for (int i = 0; i < x; i++) {
+            System.out.println("Product Name "+(i+1)+" :"+arrayName[i]);
+            System.out.println("Product Price "+(i+1)+" : R$"+arrayValue[i]);
+            System.out.println("----------------------------");
+
+
+
+
+
+
+        }
+        System.out.println("Average -> "+average/x);
+
+
+
+
+    }
+}
