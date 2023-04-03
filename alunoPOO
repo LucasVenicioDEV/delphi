@@ -1,0 +1,155 @@
+package POO;
+
+import java.util.Scanner;
+
+public class AlunoPOO {
+    Scanner input = new Scanner(System.in);
+    public String name;
+    public String ID;
+    public String majorCourse;
+    double mediaA;
+    boolean aprovedA;
+    double mediaB;
+    boolean aprovedB;
+    double mediaC;
+    boolean aprovedC;
+
+    public String course1;
+    public double gradeA1;
+    public double gradeB1;
+    public double gradeC1;
+
+    public String course2;
+    public double gradeA2;
+    public double gradeB2;
+    public double gradeC2;
+
+    public String course3;
+    public double gradeA3;
+    public double gradeB3;
+    public double gradeC3;
+
+    public void mediaCourse(){
+        System.out.printf(" Whats course you want check media?");
+        double x = input.nextDouble();
+        if (x == 1){
+            System.out.print("type grade 1: ");
+            gradeA1= input.nextDouble();
+            System.out.print("type grade 2: ");
+            gradeA2= input.nextDouble();
+            System.out.print("type grade 3: ");
+            gradeA3= input.nextDouble();
+
+            this.mediaA = (this.gradeA1+this.gradeA2+this.gradeA3)/3;
+
+            if (mediaA>= 7.0){
+                System.out.println("student aproved in this course. Media A: "+ mediaA);
+                this.aprovedA = true;
+
+            }else{
+                System.out.println("Student reporved in this course. MEDIA A: "+ mediaA);
+                this.aprovedA = false;
+            }
+
+        }else if(x==2){
+            System.out.print("type grade 1: ");
+            gradeB1= input.nextDouble();
+            System.out.print("type grade 2: ");
+            gradeB2= input.nextDouble();
+            System.out.print("type grade 3: ");
+            gradeB3= input.nextDouble();
+
+            this.mediaB = (this.gradeB1+this.gradeB2+this.gradeB3)/3;
+            System.out.println("media: "+this.mediaB);
+            if (mediaB>= 7.0){
+                System.out.println("student aproved in this course. MEDIA B: "+ mediaB);
+                this.aprovedB = true;
+
+            }else{
+                System.out.println("Student reporved in this course. MEDIA B:"+ mediaB);
+                this.aprovedB = false;
+            }
+        }
+
+        else if (x == 3){
+            System.out.print("type grade 1: ");
+            gradeC1= input.nextDouble();
+            System.out.print("type grade 2: ");
+            gradeC2= input.nextDouble();
+            System.out.print("type grade 3: ");
+            gradeC3= input.nextDouble();
+            this.mediaC = (this.gradeC1+this.gradeC2+this.gradeC3)/3;
+            if (mediaC>= 7.0){
+                System.out.println("student aproved in this course. MEDIA C: "+ mediaC);
+                this.aprovedC = true;
+
+            }else{
+                System.out.println("Student reporved in this course. MEDIA C:"+ mediaC);
+                this.aprovedC = false;
+            }
+        }
+    }
+
+
+
+
+    public void criateStudent(){
+        System.out.print("Student name: ");
+        this.name= input.nextLine();
+
+        System.out.print("Student ID: ");
+        this.ID= input.nextLine();
+
+        System.out.print("Student Major Course: ");
+        this.majorCourse= input.nextLine();
+
+        System.out.print("course 1: ");
+        this.course1 = input.nextLine();
+        System.out.print("course 2: ");
+        this.course2 = input.nextLine();
+        System.out.print("course 3: ");
+        this.course3 = input.nextLine();
+    }
+    public void statusStudent(){
+        System.out.println("student1 name = " + this.name);
+        System.out.println("student1 id = " + this.ID);
+        System.out.println("student1 major course= " + this.majorCourse);
+        System.out.println();
+
+        System.out.println("student1 course1 = " + this.course1);
+        System.out.println("student1 gradeA1 = " + this.gradeA1);
+        System.out.println("student1 gradeA2 = " + this.gradeA2);
+        System.out.println("student1 gradeA3 = " + this.gradeA3);
+        if (aprovedA){
+            System.out.println("student course 1 aproved");
+        }
+        else{
+            System.out.println("student course 1 reproved");
+        }
+        System.out.println();
+
+        System.out.println("student1 course2 = " + this.course2);
+        System.out.println("student1 gradeB1 = " + this.gradeB1);
+        System.out.println("student1 gradeB2 = " + this.gradeB2);
+        System.out.println("student1 gradeB3 = " + this.gradeB3);
+        if (aprovedB){
+            System.out.println("student course 2 aproved");
+        }
+        else{
+            System.out.println("student course 2 reproved");
+        }
+        System.out.println( );
+
+        System.out.println("student1 course3 = " + this.course3);
+        System.out.println("student1 gradeC1 = " + this.gradeC1);
+        System.out.println("student1 gradeC2 = " + this.gradeC2);
+        System.out.println("student1 gradeC3 = " + this.gradeC3);
+        if (aprovedC){
+            System.out.println("student course 3 aproved");
+        }
+        else{
+            System.out.println("student course 3 reproved");
+        }
+    }
+
+}
